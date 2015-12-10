@@ -7,7 +7,7 @@ en:
   layouts:
     jobbr:
       application:
-        title: JobbR
+        title: Schedule System
         auto_refresh: Auto-refresh
 
   jobbr:
@@ -26,6 +26,7 @@ en:
         average_run_time: Average run time
         see_all_runs: See all runs
         see_last_run: See last run
+        execute_once: Execute once
 
       show:
         status: Status

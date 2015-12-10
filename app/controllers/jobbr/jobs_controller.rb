@@ -14,6 +14,15 @@ module Jobbr
       end
     end
 
+    def exec
+      if @job = Job.by_name(params[:id])
+        # puts @job.inspect
+        run = @job.run()
+        redirect_to job_run_path(@job, run)
+        # @job.run_by_name("scheduled_jobs/#{Job.}")
+      end
+    end
+
   end
 
 end
