@@ -5,6 +5,7 @@
     %tr
       %th= t('.status')
       %th= t('.job_name')
+      %th= "description"
       %th= t('.last_run')
       %th= t('.average_run_time')
       %th
@@ -15,6 +16,7 @@
         %td
           = status_icon(job.last_run.status)
         %td= job.name
+        %td= job.description
         - if job.last_run && job.last_run.started_at
           %td= l job.last_run.started_at.localtime
         %td= ChronicDuration.output(job.average_run_time)

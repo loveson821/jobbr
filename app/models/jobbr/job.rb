@@ -10,6 +10,7 @@ module Jobbr
 
     attribute :type
     attribute :delayed, Type::Boolean
+    attribute :description
 
     collection :runs, 'Jobbr::Run'
 
@@ -41,6 +42,7 @@ module Jobbr
 
     def self.description(desc = nil)
       @description = desc if desc
+      self.instance.update :description => @description
       @description
     end
 
@@ -119,6 +121,8 @@ module Jobbr
     end
 
     def name
+      puts "self.type #{self.type}"
+      puts "self.type.demodulize #{self.type.demodulize}"
       self.type.demodulize.underscore.humanize
     end
 

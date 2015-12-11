@@ -17,7 +17,7 @@
   %body
     .navbar.navbar-default
       .navbar-header
-        %a.navbar-brand= t('.title')
+        %a.navbar-brand{:href => root_path}= t('.title')
       .collapse.navbar-collapse
         .nav.navbar-nav.navbar-right
           %a.btn.btn-default#auto-refresh{type: 'button', 'data-toggle' => 'button', href: '#'}
