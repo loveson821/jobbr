@@ -27,5 +27,5 @@
                 = fa_icon 'list'
               = link_to job_run_path(job, job.last_run), class: 'btn last-run', title: t('.see_last_run') do
                 = fa_icon 'tv'
-              = link_to exec_job_path(job), class: 'btn last-run', title: t('.execute_once') do
+              = link_to exec_job_path(job), 'data-disable-with' => "<i class='fa fa-spinner fa-spin'></i> Running...".html_safe, class: 'btn last-run', title: t('.execute_once') do
                 = fa_icon 'ship'
