@@ -121,6 +121,8 @@ module Jobbr
     end
 
     def name
+      puts "self.type #{self.type}"
+      puts "self.type.demodulize #{self.type.demodulize}"
       self.type.demodulize.underscore.humanize
     end
 

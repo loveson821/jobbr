@@ -11,6 +11,8 @@
 
 - if @run.run_time
   .well
+    = @job.description 
+    %br
     = t('.run_time', run_time: ChronicDuration.output(@run.run_time.round(2), format: :long))
 
 = render 'logs', run: @run, title: t('.logs'), size: 'large'
